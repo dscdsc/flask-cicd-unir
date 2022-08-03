@@ -82,4 +82,4 @@ jobs:
 
       - name: Create test environment & deploy
         run: |
-          (eb use test-env && eb status test-env && eb deploy) || eb create test-env -sr EMR_EC2_DefaultRole
+          (eb use test && eb status test && eb deploy) || eb create test -sr EMR_EC2_DefaultRole
