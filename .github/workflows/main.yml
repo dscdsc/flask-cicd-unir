@@ -78,7 +78,8 @@ jobs:
         run: |
           eb init -p python-3.8 Flask_Basic --region us-east-1
 
-    # Deploy to (or Create) the Elastic Beanstalk environment
+    # Deploy to (or Create) the Elastic Beanstalk environment #-sr EMR_EC2_DefaultRole
+
       - name: Create test environment & deploy
         run: |
-          (eb use test-environment && eb status test-environment && eb deploy) || eb create test-environment -sr EMR_EC2_DefaultRole
+          (eb use test-environment && eb status test-environment && eb deploy) || eb create test-environment
