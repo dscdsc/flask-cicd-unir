@@ -82,4 +82,4 @@ jobs:
 
       - name: Create test environment & deploy
         run: |
-          (eb use test-enviro && eb status test-enviro && eb deploy) || eb create test-enviro -sr LabRole
+          (eb use test-environm && eb status test-environm && eb deploy) || eb create test-environm -sr LabRole
